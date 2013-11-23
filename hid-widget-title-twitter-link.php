@@ -51,11 +51,18 @@ class HID_widget_title_twitter_link {
         $args['username'] = str_replace(array("\"", "'"), '', $args['username']);
 
         // finally check if it's a valid Twitter user name. If so return a link to the
-        // Twitter profile. If invalid do nothing;
+        // Twitter profile.
         if ((preg_match('/^[A-Za-z0-9_]{1,15}$/', $args["username"]))) {        
             return "<a href='http://twitter.com/{$args["username"]}'>@{$args["username"]}</a>";
         }
-    }  
+
+        // if the username is invalid, log a debug error and don't return anything
+        else {
+            if ( true === WP_DEBUG ) {
+                error_log('hid-widget-title-twitter-link plugin: missing or invalid user name.');
+            }
+        }
+    }
 }
 
 // construct a new instance of the cta button
