@@ -3,7 +3,7 @@
 Plugin Name: hid-widget-title-twitter-link
 Plugin URI: http://highintegritydesign.com
 Description: Provide a link to a Twitter public timeline from inside a widget title, using a shortcode.
-Version: 1.0
+Version: 1.1
 Author: North Krimsly
 Author URI: http://highintegritydesign.com
 License: GPL2
@@ -23,7 +23,7 @@ along with hid-widget-title-twitter-link. If not, see http://www.gnu.org/license
 
 */
 
-class HID_widget_title_twitter_link {  
+class HID_Widget_Title_Twitter_Link {  
 
     public function __construct()  
     {  
@@ -66,6 +66,6 @@ class HID_widget_title_twitter_link {
 }
 
 // construct a new instance of the cta button
-$hid_widget_title_twitter_link_instance = new HID_widget_title_twitter_link();  
+$hid_widget_title_twitter_link_instance = new HID_Widget_Title_Twitter_Link();  
 
 ?>
